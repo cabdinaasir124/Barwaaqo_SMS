@@ -26,6 +26,7 @@
 <script src="../js/academics/subjects.js"></script>
 <script src="../js/academics/classes.js"></script>
 <script src="../js/academics/timetable.js"></script>
+<script src="../js/academics/academic-year.js"></script>
 <!-- Widgets Init Js -->
 <script src="../assets/js/pages/crm-dashboard.init.js"></script>
 <!-- App js-->
@@ -45,8 +46,56 @@
 <!-- Buttons HTML5 + Print -->
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script>
+  feather.replace();
+
+  // Enable Bootstrap tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+
+  // Redirect when Add Student is clicked
+  document.getElementById("addStudentBtn").addEventListener("click", () => {
+    window.location.href = "student-add.php";
+  });
+</script>
+<script>
+$(document).ready(function () {
+  let locked = false;
+  let visible = true;
+
+  $("#toggleWidgets").click(function () {
+    if (locked) {
+      alert("Dashboard is locked. Unlock first to show/hide widgets.");
+      return;
+    }
+
+    visible = !visible;
+    if (visible) {
+      $("#dashboardWidgets").slideDown(300);
+      $(this).html('<i class="mdi mdi-eye-off"></i> Hide Statistics');
+    } else {
+      $("#dashboardWidgets").slideUp(300);
+      $(this).html('<i class="mdi mdi-eye"></i> Show Statistics');
+    }
+  });
+
+  $("#lockWidgets").click(function () {
+    locked = !locked;
+
+    if (locked) {
+      $(this).html('<i class="mdi mdi-lock"></i> Locked');
+      $(this).removeClass("btn-outline-danger").addClass("btn-danger");
+      $("#toggleWidgets").prop("disabled", true);
+    } else {
+      $(this).html('<i class="mdi mdi-lock-open-outline"></i> Unlock');
+      $(this).removeClass("btn-danger").addClass("btn-outline-danger");
+      $("#toggleWidgets").prop("disabled", false);
+    }
+  });
+});
+</script>
 
 <script>
+
 var options = {
 chart: { type: 'area', height: 350 },
 series: [{

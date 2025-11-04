@@ -11,9 +11,22 @@
                             <div class="flex-grow-1">
                                 <h4 class="fs-18 fw-semibold m-0">Dashboard</h4>
                             </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+  <div>
+    <button id="toggleWidgets" class="btn btn-outline-primary btn-sm">
+      <i class="mdi mdi-eye-off"></i> Hide Statistics
+    </button>
+    <button id="lockWidgets" class="btn btn-outline-danger btn-sm ms-2">
+      <i class="mdi mdi-lock-outline"></i> Lock
+    </button>
+  </div>
+</div>
+
                         </div>
 <!-- Start Modern School Dashboard Widgets -->
-<div class="row g-3">
+
+<div id="dashboardWidgets">
+  <div class="row g-3">
 
     <!-- Total Students -->
     <div class="col-md-6 col-lg-4 col-xl-3">
@@ -128,6 +141,8 @@
     </div>
 
 </div>
+</div>
+
 <!-- End Modern School Dashboard Widgets -->
 
 

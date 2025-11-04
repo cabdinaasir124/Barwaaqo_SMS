@@ -86,8 +86,8 @@
           </a>
           <div class="collapse" id="sidebarStudents">
             <ul class="nav-second-level ps-3">
-              <li><a href="student-list.php" class="tp-link">Student List</a></li>
-              <li><a href="admissions.php" class="tp-link">Admissions</a></li>
+              <li><a href="../Admin/student-list.php" class="tp-link">Student List</a></li>
+              <li><a href="../Admin/admissions.php" class="tp-link">Admissions</a></li>
               <li><a href="attendance.php" class="tp-link">Attendance</a></li>
               <li><a href="student-performance.php" class="tp-link">Performance</a></li>
             </ul>
@@ -157,7 +157,7 @@
             <ul class="nav-second-level ps-3">
               <li><a href="user-roles.php" class="tp-link">User Roles</a></li>
               <li><a href="permissions.php" class="tp-link">Permissions</a></li>
-              <li><a href="academic-year.php" class="tp-link">Academic Year</a></li>
+              <li><a href="../Admin/academic-year.php" class="tp-link">Academic Year</a></li>
               <li><a href="backup.php" class="tp-link">Backup & Restore</a></li>
               <li><a href="system-settings.php" class="tp-link">System Settings</a></li>
             </ul>
